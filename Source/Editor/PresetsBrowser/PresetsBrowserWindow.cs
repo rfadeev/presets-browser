@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEditor.Presets;
 using UnityEngine;
 
-namespace PumpEditor
+namespace PumpEditor.PresetsBrowser
 {
     public class PresetsBrowserWindow : EditorWindow
     {

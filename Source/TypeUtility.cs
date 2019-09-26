@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace PumpEditor
+namespace PumpEditor.PresetsBrowser
 {
     public static class TypeUtility
     {
