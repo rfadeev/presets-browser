@@ -28,7 +28,7 @@ namespace PumpEditor.PresetsBrowser
         private int validityToolbarIndex;
         private bool filterByPresetType;
         private Vector2 scrollPosition;
-        private string filterPresetType;
+        private string filterPresetTargetFullTypeName;
 
         [MenuItem("Window/Pump Editor/Presets Browser")]
         private static void Init()
@@ -112,20 +112,18 @@ namespace PumpEditor.PresetsBrowser
         {
             var typeNames = presetTargetFullTypeNames.ToArray();
             Array.Sort(typeNames);
-            var index = Array.IndexOf(typeNames, filterPresetType);
+            var index = Array.IndexOf(typeNames, filterPresetTargetFullTypeName);
             index = EditorGUILayout.Popup("Preset type", index, typeNames);
             if (index >= 0 && index < typeNames.Length)
             {
-                filterPresetType = typeNames[index];
-                var selectedPresetType = TypeUtility.GetType(filterPresetType);
+                filterPresetTargetFullTypeName = typeNames[index];
 
                 foreach (var preset in presets)
                 {
                     string targetFullTypeName;
                     if (TryGetValidPresetTargetFullTypeName(preset, out targetFullTypeName))
                     {
-                        var presetType = TypeUtility.GetType(targetFullTypeName);
-                        if (selectedPresetType == presetType)
+                        if (filterPresetTargetFullTypeName == targetFullTypeName)
                         {
                             presetsToDraw.Add(preset);
                         }
@@ -134,7 +132,7 @@ namespace PumpEditor.PresetsBrowser
             }
             else
             {
-                filterPresetType = null;
+                filterPresetTargetFullTypeName = null;
             }
         }
 
