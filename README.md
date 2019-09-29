@@ -11,9 +11,23 @@ to improve editor workflow. While presets can be found via project window search
 determine preset asset validity in project window. Presets browser editor window addresses this issues and serves as central
 place to access all project presets.
 
+## Installation
+Project supports Unity Package Manager. To install project as Git package do following:
+1. Close Unity project and open the `Packages/manifest.json` file.
+2. Update `dependencies` to have `com.rfadeev.pumpeditor.presetsbrowser` package:
+```json
+{
+  "dependencies": {
+    "com.rfadeev.pumpeditor.presetsbrowser": "https://github.com/rfadeev/presets-browser.git"
+  }
+}
+```
+3. Open Unity project.
+
+Alternatively, add this repository as submodule under `Assets` folder or download it and put to `Assets` folder of your Unity project. 
+
 ## How to use
-Add this repository as submodule under `Assets` folder or download it and put to `Assets` folder of your Unity project. Access
-presets browser via Unity toolbar: **Window -> Pump Editor -> Presets Browser**.
+Access presets browser via Unity toolbar: **Window -> Pump Editor -> Presets Browser**.
 
 Preset can be invalid if you delete the class it was referencing. To filter presets by validity use validity toolbar.
 Following options are supported:

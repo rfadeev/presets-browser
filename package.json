@@ -1,0 +1,11 @@
+{
+    "name": "com.rfadeev.pumpeditor.presetsbrowser",
+    "displayName": "Presets Browser",
+    "version": "1.0.0",
+    "unity": "2018.1",
+    "description": "Unity presets browser editor window.",
+    "author": {
+        "name": "Roman Fadeev",
+        "url": "https://twitter.com/Sunset_Drive"
+    }
+}
