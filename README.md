@@ -1,4 +1,5 @@
 [![license](https://img.shields.io/github/license/rfadeev/presets-browser.svg)](https://github.com/rfadeev/presets-browser/blob/master/LICENSE.md)
+[![openupm](https://img.shields.io/npm/v/com.rfadeev.pumpeditor.presetsbrowser?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.rfadeev.pumpeditor.presetsbrowser/)
 
 # Presets browser
 Unity presets browser editor window.
@@ -12,6 +13,17 @@ determine preset asset validity in project window. Presets browser editor window
 place to access all project presets.
 
 ## Installation
+
+### Install via OpenUPM
+
+The package is available on the [openupm registry](https://openupm.com). It's recommended to install it via [openupm-cli](https://github.com/openupm/openupm-cli).
+
+```
+openupm add com.rfadeev.pumpeditor.presetsbrowser
+```
+
+### Install via Git URL
+
 Project supports Unity Package Manager. To install project as Git package do following:
 1. Close Unity project and open the `Packages/manifest.json` file.
 2. Update `dependencies` to have `com.rfadeev.pumpeditor.presetsbrowser` package:
@@ -24,7 +36,10 @@ Project supports Unity Package Manager. To install project as Git package do fol
 ```
 3. Open Unity project.
 
+### Install via Git Submodule
+
 Alternatively, add this repository as submodule under `Assets` folder or download it and put to `Assets` folder of your Unity project. 
+
 
 ## How to use
 Access presets browser via Unity toolbar: **Window -> Pump Editor -> Presets Browser**.
